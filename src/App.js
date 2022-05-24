@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios'
+import React, { useState } from 'react'
+import './App.css'
 
-function App() {
+export default function App() {
+  const apiKey = '904c55231af7c4945ddfc2dc7a143431'
+  const apikey2 = "eeac188914e521cc6c4c4720d662cce0"
+  const [weatherData, setWeatherData] = useState ([{}])
+  const [city, setCity] = useState("")
+
+  const getWeather = (event) => {
+    if (event.key == "Enter") {
+      axios
+        .get(`http://api.weatherstack.com/current?access_key=${apikey2}&query=${city}`).then(
+          res => {
+          setWeatherData(res.data);
+          setCity('')
+        });
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h4 className='heading'>Weather App</h4>
+      <input 
+        className='input' 
+        placeholder='Type a city..'
+        onChange={e => setCity(e.target.value)}
+        value={city}
+        onKeyDown={getWeather}
+        />
+      
     </div>
-  );
+  )
 }
-
-export default App;
