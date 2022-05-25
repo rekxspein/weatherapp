@@ -10,12 +10,13 @@ export default function App() {
 
   const getWeather = (event) => {
     if (event.key == "Enter") {
-      axios
-        .get(`http://api.weatherstack.com/current?access_key=${apikey2}&query=${city}`).then(
-          res => {
-          setWeatherData(res.data);
-          setCity('')
-        });
+      fetch(`http://api.weatherstack.com/current?access_key=${apikey2}&query=${city}`).then(
+          response => response.json()
+        ).then(
+          data => {
+            setWeatherData(data)
+          }
+        );
     }
   }
 
