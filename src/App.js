@@ -44,7 +44,7 @@ export default function App() {
               <div className="flexbox-item-2">{weatherData.current.weather_descriptions}</div>
               <div className="flexbox-item-3">{weatherData.current.temperature}&#176;C</div>
               <div className="">UV index - {weatherData.current.uv_index}</div>
-              <div className="card app history">
+              <div className="card app forecast">
                   <p className='day1'></p>
                   <p className='day2'></p>
                   <p className='day3'></p>
