@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Card} from "react-bootstrap";
+import { Button, Card} from "react-bootstrap";
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   const apikey = "eeac188914e521cc6c4c4720d662cce0"
@@ -45,12 +46,7 @@ export default function App() {
               <div className="flexbox-item-3">{weatherData.current.temperature}&#176;C</div>
               <div className="">UV index - {weatherData.current.uv_index}</div>
               <div className="card app forecast">
-                  <p className='day1'></p>
-                  <p className='day2'></p>
-                  <p className='day3'></p>
-                  <p className='day4'></p>
-                  <p className='day5'></p>
-
+                  <Button variant="primary">Weather History</Button>
               </div>
               <div className=""></div>
               <div className=""></div>
