@@ -1,32 +1,58 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  background-color: #3434a3;
-  background-image: url('https:img.wallpapersafari.com/desktop/1920/1080/5/77/xwQd39.jpg');
-  height: 100%;
-}
-
-.heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  font-size: 150%;
-  color: rgb(240, 237, 243);
-}
 .input {
   padding: 15px;
-  width: 90%;
-  margin: auto;
+  width: 30%;
   border: 1px solid lightblue;
   border-radius: 8px;
   font-size: 16px;
   padding: 10px;
 }
+
 .input:focus {
   outline: none;
+}
+
+body {
+  color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #CFD8DC;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-image: url("https:images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  width: 800px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 4px #9E9E9E;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.cityinput{
+  color: rgb(204, 149, 149);
+}
+.flexbox-container {
+  display: flex;
+  margin: 10px;
+}
+
+.card.app.warm {
+margin: 145px;
+background-image: url("https:d3srkhfokg8sj0.cloudfront.net/wp-content/uploads/sites/295/vitamin-D-pix1.jpg");
+}
+
+.card.app {
+  margin: 145px;
+  background-image: url("https:images.theconversation.com/files/306448/original/file-20191211-95111-fbz9rf.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop");
+}
+
+.card.card.app.history {
+  margin: 145px;
+  background-image: url("https:www.smdp.com/wp-content/uploads/2019/03/SUMMERVSWINTER.jpg");
+  height: 100px;
 }
